@@ -25,7 +25,7 @@ namespace LabyrinthSolver
         // print object..
         public override string ToString()
         {
-            return string.Format("[y:{0},x:{1}]", this.y, this.x);
+            return string.Format("[x:{0},y:{1}]", this.x, this.y);
         }
     }//class
 }//namespace

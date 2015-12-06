@@ -32,8 +32,14 @@
     * Print to screen
  * 
  * 
- * 
- * 
+ * Criterias: 
+ *  Start: top-left corner
+ *  Goal: Bottom-right corner
+ *  No diagonal movements
+ *  Do not revesit a room/node
+ *  Result must be displayed graphically and/or printed in a clear manner. 
+ *  if two paths of equal cost are available, display both. 
+ *  
  * 
  */
 namespace LabyrinthSolver
@@ -43,10 +49,10 @@ namespace LabyrinthSolver
         static void Main()
         {
             // Make new grid. Given a size, and random values. 
-            var grid = new Labyrinth(5, 0, 10);
-
+            var grid = new Labyrinth(5, 1, 10);
+            /*
             // for testing purposes, we'r setting the node-costs to the values given in task. 
-            /*grid.costs = new int[,] {
+            grid.costs = new int[,] {
                 { 1,3,2,5,9}, 
                 { 6,5,1,3,3}, 
                 { 4,2,1,4,5}, 
@@ -61,7 +67,7 @@ namespace LabyrinthSolver
 
             // Print results
             astar.drawCalculatedCosts();
-            astar.printReconstructedPath();
+            astar.printReconstructedPaths();
 
         }
     } // Class program
